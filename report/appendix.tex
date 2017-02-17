@@ -1,0 +1,116 @@
+\section{Appendix}
+\subsection{Asimov Significance Errors}
+\label{sec:appendix_errors}
+For a multivariate function $f$ depending on a set of variables $\overrightarrow{x}$, the resultant uncertainty in $f$ can be expressed as 
+\begin{equation}
+\Delta f(\overrightarrow{x}) = \sqrt{\sum_{i=1}^{n} 
+\left( \frac{\partial f}{\partial x_i}\Delta x_i \right)^2}
+\end{equation}
+
+For the approximate discovery significance $\frac{s}{\sqrt{b}}$, the error in this statistic is given by
+
+\begin{equation}
+\sqrt{\left( \frac{\Delta s}{\sqrt{b}} \right)^2 + \left( \frac{s\Delta b}{-2x^{-3/2}} \right)^2 } = \sqrt{\frac{(\Delta s)^2}{b} + \frac{s^2 (\Delta b)^2}{4b^{3}}}
+\end{equation}
+
+\subsection{Type I and II errors}
+
+In practise, there always exists some probability of rejecting the null hypothesis $H_0$ in favour of the signal hypothesis $H_1$. This is known as a type I error and its probability $\alpha$ is given by the equation
+\begin{equation}
+\alpha = \int_{W}f(x|H_0)dx,
+\end{equation}
+where $W$ is the signal region and $f(x|H_0)$ is the background probability density function. This is also known as the false discovery rate or significance.
+
+Conversely, type II errors are defined as accepting the null hypothesis if $H_1$ is true. Its probability is equal to
+\begin{equation}
+\beta = \int_{W}f(x|H_1)dx.
+\end{equation}
+The power of the test with respect to the hypothesis $H_1$, or the probability of accepting $H_1$ when it is true is equal to $1-\beta$.
+
+From Bayes' theorem, the posterior probability the signal purity is given by
+\begin{equation}
+P(s|x\in W) = \frac{P(x\in W|s)P(s)}{P(x\in W|s)P(s) + P(x \in W|b)P(b)}
+\end{equation}
+
+here $W$ is the signal region and $P(s)$ is the prior probability. $P(x\in W|s) = \epsilon_{\rm{s}}$, where $\epsilon_{\rm{s}}$ is known as the signal efficiency- this is equivalent to the power of the experiment $1-\beta$. Conversely, $P(x \in W|b) =  \int_{W}f(x|H_0)dx = \epsilon_{\rm{b}}$, where $\epsilon_{\rm{b}}$ is the background efficiency, equal to the significance $\alpha$.
+
+\subsection{Neyman-Pearson Lemma}
+In order to optimise the critical region, the boundary at which a transverse energy cut is applied, the Neyman-Pearson lemma \cite{NeymanPearsonLemma} is applied. This requires that the test statistic
+
+\begin{equation}
+t(x) = \frac{f(x|H_1)}{f(x|H_0)}
+\end{equation}
+
+is maximised, where $f(x|H_1)$ and $f(x|H_0)$ are the probability density functions for $Z'$ and $DY$ events in this case.
+
+\subsection{Cross Sections}
+
+\begin{table}[h!t]
+\label{table:DYXS}
+\centering
+\caption{ Drell-Yan cross sections }
+\begin{tabular}{ |c|c| } 
+\hline
+Mass (GeV) & $\sigma B\,$(fb)\\\hline
+$120-180$ & $9846$ \\\hline
+$180-250$ & $1571$\\\hline
+$250-400$ & $549.2$\\\hline
+$400-600$ & $89.66$\\\hline
+$600-800$ & $15.1$\\\hline
+$800-1000$ & $3.75$\\\hline
+$1000-1250$ & $1.293$\\\hline
+$1250-1500$ & $0.3577$\\\hline
+$1500-1750$ & $0.1123$\\\hline
+$1750-2000$ & $0.03838$\\\hline
+$2000-2250$ & $0.01389$\\\hline
+$2250-2500$ & $5.23\times10^{-3}$\\\hline
+$2500-2750$ & $2.02\times10^{-3}$\\\hline
+$2750-3000$ & $7.89\times10^{-4}$\\\hline
+$3000+$ & $5.04\times10^{-4}$\\\hline
+\end{tabular}
+\end{table}
+
+%http://w3.iihe.ac.be/~bclerbau/Summer07/cross_section_BSM.text
+\begin{table}[h!t]
+\label{table:ZPrimeXS}
+\centering
+\caption{ $Z'$ cross sections }
+\begin{tabular}{ |c|c| } 
+\hline
+Mass (GeV) & $\sigma B\,$(fb) \\\hline
+$1500$ & $15.134$ \\\hline
+$2000$ & $2.556$ \\\hline 
+$2500$ & $0.696$ \\\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!t]
+\label{table:DBi}
+\centering
+\caption{ Diboson cross sections }
+\begin{tabular}{ |c|c| } 
+\hline
+Process & $\sigma B\,$(fb) \\\hline
+$WW$ & $1.149\times10^4$ \\\hline
+$WZ$ & $3481$ \\\hline 
+$ZZ$ & $976$ \\\hline
+$t\overline{t}$ & $8.02\times10^4$\\\hline
+\end{tabular}
+\end{table}
+
+\subsection{Asimov Partial Derivatives}
+
+Using the chain rule, the rate of change of discovery significance with respect to the search window size can be expressed as
+
+\begin{equation}
+\frac{d Z_0}{d W} = \frac{\partial Z_0}{\partial s}\frac{\partial s}{\partial W} + \frac{\partial Z_0}{\partial b}\frac{\partial b}{\partial W} = 0.
+\end{equation}
+
+The partial derivatives of Equation \ref{eqn:asimov} are equal to
+
+\begin{equation}
+\begin{split}
+\frac{\partial Z_0}{\partial s} & = \frac{\ln(\frac{s}{b}+1)}{\sqrt{2\left((b+s)\ln(\frac{s}{b}+1))-s\right)}} \\ 
+\frac{\partial Z_0}{\partial b} & = \frac{\ln(\frac{s}{b}+1)-\frac{s}{b}}{\sqrt{2\left((b+s)\ln(\frac{s}{b}+1))-s\right)}}.
+\end{split}
+\end{equation}
