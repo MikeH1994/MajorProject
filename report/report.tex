@@ -260,8 +260,10 @@ This section aims to give an overview of the search for the $Z'$ boson before go
 \subsection{Previous Searches for the $Z'$ and Current Experimental Limits}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{sec:study_previousLimits}
 
-
+%Use https://arxiv.org/pdf/hep-ph/0408098.pdf as a template
 The $Z'$ has been the focus of a number of searches at LEP and the LHC, and these experiments have previously set limits on the mass at which various $Z'$ bosons could exist. The experiment at CMS in 2015 set the lower limits on the $Z_{\rm{SSM}}'$ as $2.90\,$TeV and the superstring $Z_{\Psi}'$ at $2.57\,$TeV \cite{CMSDileptonSearch}. 
+
+The next LHC run at the time of writing, scheduled to begin taking data in June 2017, offers the potential to probe higher mass ranges. The run aims to provide an integrated luminosity of between 45 and 60$\,\rm{fb}^{-1}$, more than double compared to the luminosity of the 2012 run, at a centre of mass energy of $13\,$TeV.
 
 \subsection{Main Backgrounds}%%%%%%%%%%%%%%%%%%%%%%
 \label{sec:study_mainBackgrounds}
@@ -351,15 +353,8 @@ Some of the samples are `binned' in to certain mass regions in order to improve 
 
 The Monte Carlo samples in this paper have all been scaled to an integrated luminosity of $20.3\,\rm{fb}^{-1}$, which was the integrated luminosity of the LHC during the 2012 run.
 
-In total, four different sample sets were used in this paper. These were a Drell-Yan sample, binned into 14 subsets that ranged up to $3\,$TeV, a $Z'$ at $1.5$, $2$ and $2.5$ TeV, an unbinned diboson sample containing $WW$, $WZ$ and $ZZ$ events, and an unbinned $t\overline{t}$ sample.
+In total, four different sample sets were used in this paper. These were a Drell-Yan sample, binned into 14 subsets that ranged up to $3\,$TeV, a $Z'$ at $1.5$, $2$ and $2.5$ TeV, an unbinned diboson sample containing $WW$, $WZ$ and $ZZ$ events, and an unbinned $t\overline{t}$ sample. The simulated $Z'$ samples in this case are those of the Sequential Standard Model ($Z'_{SSM}$).
 
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.25]{images/DYBackground.png}
-    \caption{The simulated background from Drell-Yan events using a loose selection criteria.}
-\end{figure}
 
 \section{Cuts and Event Selection}
 \label{sec:cuts}
@@ -496,12 +491,21 @@ Tight & $60.8\pm0.4$ & $60.3\pm0.4$ & $60.0\pm0.4$ & $29.5\pm0.7$ & $1.14\pm0.02
     \caption{ The $\rm{acceptance}\times\rm{efficiency}$ is plotted as a function of energy for the Drell-Yan and $Z'$ samples. It can be seen that the fractional number of events that are identified are approximately equal. \label{fig:acceptance}}
 \end{figure}
 
+The Drell-Yan background generated can be seen in Figure \ref{fig:DYBackground}.  
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.25]{images/DYBackground.png}
+    \caption{The simulated background from Drell-Yan events using a loose selection criteria. \label{fig:DYBackground}}
+\end{figure}
+
 \section{Monte Carlo Simulated Analysis}
 \label{sec:MonteCarloSimulatedAnalysis}
 
-The 
+The following section addresses a variety of topics within the search for the $Z'$. Section \ref{sec:MCA_ZPrime} introduces the simulated $Z'$ samples, as well as the width of the $Z'$ resonance peak how the signal and background plots appear. Section \ref{sec:MCA_Discovery} covers the discovery significance of a possible search in this range, as well as optimising the search using fixed windows or open cuts. Section \ref{sec:MCA_variables} analyses variables associated with the simulated events and identifies possible linear cuts. The possible resolution of the search for the $Z'$ is addressed in Section \ref{sec:MCA_resolution}, while the trigger efficiencies are investigated in Section \ref{sec:MCA_Trigger}. The distribution of events in the barrel and end-cap regions are investigated in Section \ref{sec:MCA_barrelEndcap}, while the forwards-backwards asymmetry of the events are analysed in Section \ref{sec:MCA_fwAsym}
 
 \subsection{$Z'$ Simulated Events}
+\label{sec:MCA_ZPrime} 
  
 As there is a range of masses at which the $Z'$ could appear, it is important to study samples at various masses in order to determine the most appropriate search conditions for the experiment. Three different $Z'$ sample sets were used in this paper, at masses of $1500\,$GeV, $2000\,$GeV and $2500\,$GeV. While these masses have been ruled out by previous searches, it is still useful to use these samples as the information provided is still relevant to searches at higher masses. 
 
@@ -567,7 +571,7 @@ $Z'$ mass (GeV) & $\Gamma\,$(GeV) & $\frac{\Gamma}{M_{Z'}}$ & $N_{\rm{tot}}$ & $
 \end{tabular}
 \end{table}
 
-From the table, it can be calculated that the average width of the $Z'$ peak as a fraction its mass is $\frac{\Gamma}{M_{Z'}} = 0.0380\pm0.0002$.
+From the table, it can be calculated that the average width of the $Z'$ peak as a fraction its mass is $\frac{\Gamma}{M_{Z'}} = 0.0380\pm0.0006$.
 
 \begin{figure}[h]
     \centering
@@ -577,6 +581,7 @@ From the table, it can be calculated that the average width of the $Z'$ peak as 
 
 
 \subsection{Discovery Significance}
+\label{sec:MCA_Discovery}
 
 In order to claim a discovery, a signal must be detected to a significance of $5\sigma$. Therefore, it is important to modify the search such that the maximum significance can be achieved for a given number of signal events. In this section, the Monte-Carlo data will be analysed to determine the optimum method of discovery.
 
@@ -642,6 +647,7 @@ $Z'$ mass (GeV) &  ID Criteria & Best Search Width (GeV) & Maximum $Z_0$ & Best 
 \end{table}
 
 \subsection{Variables and Linear Cuts}
+\label{sec:MCA_variables}
 
 In this section, lepton variables are investigated and possible linear cuts are introduced in order to cut out background events while maintaining as much of the signal as possible. The variables plotted are the background spectrum for Drell-Yan, $t\overline{t}$ and diboson events as well as a $Z'$ at $1.5\,$TeV.
 
@@ -780,6 +786,8 @@ $W_{\eta^2}$ & $54.5\pm0.4$ & $60.2\pm0.4$ & $63.6\pm0.4$ & $0.142\pm0.001$ & $0
 
 
 \subsection{Detector Resolution Study}
+\label{sec:MCA_resolution}
+
 
 %http://inspirehep.net/record/796888?ln=en
 
@@ -821,13 +829,19 @@ where $a$ and $b$ are stochastic and noise terms respectively.
 
 The resolution of the detector, $\sigma_{\rm{det}}$, is plotted as a function of the invariant mass of a reconstructed particle in Figure \ref{fig:Resolution}. Drell-Yan samples are used here as the process is very similar kinematically to that of the $Z'$, and is a larger sample than that available in the $Z'$ data set, improving the uncertainty associated with the measurement of the resolution. The Drell-Yan set also exists over a larger range, allowing the evolution of the resolution of the detector as a function of the invariant mass to be investigated. It is seen that for both the barrel and end-cap regions, the resolution tends towards $1\%$ at higher energies, of the order of $2\,$TeV. However, in the low energy range the uncertainty in the measurement of the invariant mass is significantly higher than expected.
 
-\subsection{Trigger and ID Criteria Efficiencies}
+\subsection{Trigger Efficiencies}
+\label{sec:MCA_Trigger}
+
+When starting an experimental run, it is important to select the correct trigger as this determines the criteria for which the detector will consider an event potentially `interesting' and save it for offline analysis. There are a number of possible triggers that can be used, specifying different energy and track requirements before the threshold is met.
+
+The efficiencies for various triggers are plotted 
 
 \begin{figure}[h]
-    \centering \includegraphics[scale=0.3]{images/TriggerZ.png} \caption{ The fraction of signal events passing the trigger \label{fig:TriggerZ} }
+    \centering \includegraphics[scale=0.3]{images/TriggerEfficiencies.png} \caption{ The fraction of signal events passing the trigger \label{fig:TriggerZ} }
 \end{figure}
 
-\subsection{Barrel and Endcap}
+\subsection{Barrel and End-cap}
+\label{sec:MCA_barrelEndcap}
 
 In the experiment, it is useful to determine the likely position of the final state pairs in the detector. The positions of the dilepton pair can be categorised as one of three combinations; these are barrel-barrel, barrel-end-cap, and end-cap-end-cap. As the name suggests, a barrel-barrel event is one in which both final state leptons are located in the barrel of the EM calorimeter, while barrel-end-cap events are those in which one lepton is located in the barrel and another in the end-cap. As discussed in Section \ref{sec:ATLAS_DetectorSchematics}, an electron is located in the barrel if its pseudorapidity $|\eta|<1.37$. If $|\eta|>1.52$ the lepton is located in the end-cap, with leptons located in the crack region between the two not passing the selection criteria.
 
@@ -851,20 +865,37 @@ In the experiment, it is useful to determine the likely position of the final st
 The fraction of events falling into this category are plotted for the Drell-Yan sample and the $1.5\,$TeV $Z'$ sample. It can be seen that in the TeV range, in which  a $Z'$ may be located, more than $80\%$ of dilepton pairs fall in to the `barrel-barrel' category. 
 
 \subsection{Forwards Backwards Asymmetry}
+\label{sec:MCA_fwAsym}
 
 %http://iopscience.iop.org/article/10.1088/1742-6596/383/1/012005/pdf
 
-As weak interactions can violate parity, the spatial distributions of these 
-The forwards backwards asymmetry is a measure of how likely an event is to be `forwards facing' with respect to some frame of reference compared to backwards. 
+As weak interactions can violate parity, the asymmetry in the spatial distributions of of final state particles can be used to measure the strength of certain interactions.
+ 
+The forwards backwards asymmetry is a measure of how likely an event is to be `forwards facing' with respect to some frame of reference as opposed to backwards. This section will focus on the variable $\theta^*$ using the Collins-Soper formalism, which is defined as the angle between the positron and the polar axis in the reference frame of the electron.
+
+$\cos\theta^*$ is then calculated as
+
+\begin{equation}
+\cos\theta^* = \frac{2}{Q\sqrt{Q^2 + Q^{2}_{T}}}( P^{+}_{1}P^{-}_{2} - P^{-}_{1}P^{+}_{2} ),
+\end{equation}
+
+where $P_1$ and $P_2$ are the four momentum of the electron and positron respectively, $P^{\pm}_{i} = \frac{1}{\sqrt{2}}(P^{0}_{i} \pm P^{3}_{i})$ and $P^0$ and $P^3$ represent the energy and longitudinal component of the momentum, and $Q$ and $Q_T$ are the four momentum and transverse momentum of the dilepton pair \cite{ForwardsBackwardsAsymmetry}.
 
 \begin{figure}[h]
-    \centering \includegraphics[scale=0.3]{images/cosThetaStar.png} \caption{The variable $\cos\theta^*$ is plotted for $Z'$ and Drell-Yan events. It can be seen that  \label{fig:cosTheta} }
+    \centering \includegraphics[scale=0.3]{images/cosThetaStar.png} \caption{The variable $\cos\theta^*$ is plotted for $1.5\,$TeV $Z'$ and Drell-Yan events. It can be seen that $Z'$ events are slightly more weighted to be forwards facing, with the Drell-Yan events in the range $1.25-1.75\,$TeV have a much more significant asymmetry. \label{fig:cosTheta} }
 \end{figure}
+
+The distribution of $\cos\theta^*$ is plotted for a $1.5\,$TeV $Z'$ as well as Drell-Yan events in the range of $1.25-1.75\,$TeV in Figure \ref{fig:cosTheta}. In the case of the $Z'$, the distribution is slightly skewed towards forwards events. However, for the Drell-Yan events, there is a much larger asymmetry. 
 
 \section{Conclusion}
 \label{sec:Conclusion}
 
-The $Z'$ is a hypothetical Beyond the Standard Model particle that has been the subject of extensive searches at the LHC and LEP. 
+While the Standard Model has been incredibly successful in matching experimental observations, it is far from a complete theory of nature. Among the candidates for a Beyond the Standard Model (BSM) theory are models such as GUTs based on the $E_6$ gauge group and the Sequential Standard Model (SSM). A product of a number of these models is the $Z'$, a heavy BSM particle that is analogous to the Standard Model $Z$ boson. Predict to lie on the TeV scale, it has been the subject of a number of extensive searches at the LHC at LEP. This paper utilised  simulated data sets for the SSM $Z'$ at various masses as well as background processes in order to perform various studies regarding the search for the $Z'$, and generated several results. The average width of the $Z'$ resonance peak as a fraction its mass was calculated as $0.0380\pm0.0006$. It was determined that 
+
+There are a number of further ideas and improvements that can extend the work done in this paper. Given the current lower limits on the mass of the $Z'$ exceed the mass of the simulated samples, performing the studies addressed in this paper in the range of the current mass ranges will provide information more relevant to the current search. In addition, using binned background samples extending up to higher masses than were available for this paper will provide a more accurate assessment of the discovery significance and the impact of background processes on the search for the $Z'$. %[TODO: maybe remove]%
+In addition, a deeper multivariate analysis of the data may provide a greater ability to remove some of the reducible background as well as further information regarding the correlation between certain variables. In addition, further investigation of the resolution of the $Z'$ invariant mass would be useful to determine if the resolution as a function dilepton mass obtained in Section \ref{sec:MCA_resolution} was an erroneous result or does in fact represent the effective resolution obtainable.
+
+The next run at the LHC begins in June 2017, and provides the potential to probe higher masses than ever before, with an expected integrated luminosity in the range of $45-60\,\rm{fb}^{-1}$ at $13\,$TeV. This provides a much higher discovery potential compared to the samples representing data from the 2012 run, which the simulated data used in this paper is based on. 
 
 \bibliographystyle{unsrt}
 \bibliography{./references}
