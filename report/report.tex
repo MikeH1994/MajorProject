@@ -55,31 +55,38 @@ The $Z'$ is a hypothetical particle predicted by extensions to the Standard Mode
 \large
 \section{Introduction}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{sec:Introduction}
-The Standard Model, or SM, is the product of the advances in theoretical and experimental particle physics over the course of the past century. While it has been incredibly successful in explaining experimental results, it is far from a complete theory of nature. The Standard Model is has over 22 free parameters which are fixed through experimental observations without any underlying reasoning why, which is view as a theoretically unappealing property. It is also unable to be reconciled with gravity, and does not offer any realistic dark matter candidates. 
+The Standard Model, or SM, is the product of the advances in theoretical and experimental particle physics over the course of the past century. While it has been incredibly successful in explaining experimental results, it is far from a complete theory of nature. The Standard Model has over 22 free parameters which are fixed through experimental observations without any underlying reasoning why, which is viewed as a theoretically unappealing property. It is also unable to be reconciled with gravity, and does not offer any realistic dark matter candidates. 
 
-However, there are a number of possible extensions to the Standard Model that are able to address these limitations. Grand Unified Theories (or GUTs), for example, continue the method of invoking gauge invariance that has been the foundation of the Standard Model. These involve embedding the gauge groups of the Standard Model ($SU(3)_C \otimes SU(2)_L \otimes U(1)$) into a single, larger gauge group such as $SO(10)$ or $E_6$. The introduction of new fields to maintain the invariance of the Lagrangian results in new gauge bosons, allowing the new physics to emerge in this theory.
+However, there are a number of possible extensions to the Standard Model that are able to address these limitations. Grand Unified Theories (or GUTs), for example, continue the method of invoking gauge invariance that has been the foundation of the Standard Model. These involve embedding the gauge groups of the Standard Model ($SU(3)_C \otimes SU(2)_L \otimes U(1)$) into a single, larger gauge group such as $SO(10)$ or $E_6$. The introduction of new fields to maintain the invariance of the Lagrangian results in new gauge bosons, allowing new physics to emerge in this theory.
 
-Large Hadron Collider, which started taking data in 2008, is a synchrotron that collides protons together at a centre of mass energy of up to $\sqrt{s} = 14\,$TeV and is currently the most powerful particle accelerator on the planet. This review data will utilise data collected at the ATLAS detector, one of the two general purpose detectors at the LHC, to search for the the existance of the $Z'$ boson.
+Large Hadron Collider, which started taking data in 2008, is a synchrotron that collides protons together at a centre of mass energy of up to $\sqrt{s} = 14\,$TeV and is currently the most powerful particle accelerator on the planet. This report will utilise simulated data representing events collected at the ATLAS detector, one of the two general purpose detectors at the LHC, to search for the the existence of the $Z'$ boson.
 
 In particular, the search will focus on looking for an excess in dilepton final states in the TeV range. Dilepton final states are most often described by a charged lepton and its corresponding antiparticle, such as $e^+e^-$ or $\mu^+\mu^-$ pairs. The electron-positron pair final state is of particular interest in this paper. While a $Z'$ could feasibly decay in a number of possible ways such as $q\overline{q}$, the dilepton final states are attractive from an experimental standpoint as they are simpler to resolve. Electrons and positrons are stable, unlike mesons which decay into a number of possible final state particles, some of which cannot be detected such as neutrinos. This review data will utilise Monte Carlo data of simulated events at the ATLAS detector and analyse these in ROOT \cite{ROOT} in order to optimise the search.
 
-Section \ref{sec:TheoreticalMotication} introduces the theoretical motivation behind looking beyond the Standard Model and the search for a $Z'$ boson. Section \ref{sec:ATLAS} gives an overview of the different aspects of the ATLAS detector and how particles are identified, as well as the trigger system at the detector. In Section \ref{sec:Study}, the search for the $Z'$ boson is outlined, including the main background the experiment is subject to and the cuts applied. Section \ref{sec:MonteCarloSimulatedAnalysis} covers an analysis of simulated $Z'$ events and how this can be used to improve the search.
+Section \ref{sec:TheoreticalMotication} introduces the theoretical motivation behind looking beyond the Standard Model and the search for a $Z'$ boson. Section \ref{sec:ATLAS} gives an overview of the different aspects of the ATLAS detector and how particles are identified, as well as the trigger system at the detector. In Section \ref{sec:Study}, the search for the $Z'$ boson is outlined, including the main backgrounds and the use of Monte Carlo simulations. Section \ref{sec:cuts} covers the ATLAS selection criteria, and the event selection process that is used in this paper, while Section \ref{sec:MonteCarloSimulatedAnalysis} covers the analysis of simulated $Z'$ events and how this can be used to improve the search for the particle. Finally, Section \ref{sec:Conclusion} gives a conclusion of the content covered in this report.
+
+
+%\label{sec:TheoreticalMotication}
+%\label{sec:ATLAS}
+%\label{sec:Study}
+%\label{sec:cuts}
+%\label{sec:MonteCarloSimulatedAnalysis}
 
 \section{Theoretical Motivation}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{sec:TheoreticalMotication}
 
-The Standard Model, or SM, represents the signficant advances in theoretical and experimental advances over the course of the past half-century. The SM is composed of three distinct sections- two spin $\frac{1}{2}$ families, leptons and quarks, collectively known as fermions, and a family of spin 1 gauge bosons which act as ``force carriers'' and mediate the interactions between particles. In 2012, the newest addition to the Standard Model was discovered. This was the spin 0 Higgs boson, which had been predicted some decades earlier and was a fundamental component of how the gauge bosons, and the fermions, could gain mass by the process of spontaneous symmetry breaking. 
+The Standard Model (or SM), represents the significant advances in theoretical and experimental physics over the course of the past century. The SM is composed of three distinct sections- two spin $\frac{1}{2}$ families, leptons and quarks, collectively known as fermions, and a family of spin 1 gauge bosons which act as ``force carriers'' and mediate the interactions between particles. In 2012, the newest addition to the Standard Model was discovered. This was the spin 0 Higgs boson, which had been predicted some decades earlier and was a fundamental component of how the gauge bosons, and the fermions, could gain mass by the process of spontaneous symmetry breaking. 
 
-One of the major cornerstones of the theoretical basis behind the Standard Model has been \textit{gauge invariance}. Gauge invariance can be viewed as being analagous to the principle of general covariance; that is, the underlying physical laws of a theory are not dependant dependant on the coordinate system used to describe them, but rather are invariant under the transformations between differentiable coordinate systems. Similarly, gauge invariance works on the basis of applying a \textit{gauge transformation} to a system, the transformation being described by the mathematics of group theory. 
-While the Standard Model has been remarkably successful in explaining experimental phenomena, and there are currently no significiant disagreements with experimental observations, it is not viewed as a fundamental theory of nature. It is at present unable to incorporate one of the four fundamental forces of nature- gravity. The two are often said to be ``fundamentally incompatible''.
+One of the major cornerstones of the theoretical basis behind the Standard Model has been \textit{gauge invariance}. Gauge invariance can be viewed as being analogous to the principle of general covariance; that is, the underlying physical laws of a theory are not dependent on the coordinate system used to describe them, but rather are invariant under the transformations between differentiable coordinate systems. Similarly, gauge invariance works on the basis of applying a \textit{gauge transformation} to a system, the transformation being described by the mathematics of group theory. 
+While the Standard Model has been remarkably successful in explaining experimental phenomena, and there are currently no significant disagreements with experimental observations, it is not viewed as a fundamental theory of nature. It is at present unable to incorporate one of the four fundamental forces of nature- gravity. The two are often said to be ``fundamentally incompatible''.
 
-At the comparatively low energies acheivable at the LHC, the effect is far weaker than can be measured, and such the results of the Standard Model are still very  consistent with experiments. At much higher energies approaching the Planck scale, the impact of gravity cannot be neglected- this is the scale at which the Standard Model is predicted to break down. Therefore, the Standard Model can be viewed as an effective ``low energy approximation'' of nature, analagous to how the equations of classical mechanics in the regime $v<<c$ and can be retrieved from the Taylor expansion of the equations of special relativity.
+At the comparatively low energies achievable at the LHC, the effect is far weaker than can be measured, and as such the results of the Standard Model are still very  consistent with experiments. At much higher energies approaching the Planck scale, the impact of gravity cannot be neglected- this is the scale at which the Standard Model is predicted to break down. Therefore, the Standard Model can be viewed as an effective ``low energy approximation'' of nature, analogous to how the equations of classical mechanics in the regime $v<<c$ can be retrieved from the Taylor expansion of the equations of special relativity.
 
 In addition, the Standard Model has 22 free parameters are fixed by experimental results; there is no underlying reason for the values these parameters take, which is often seen as a theoretically unsatisfying property. The Standard Model also cannot account for dark matter or neutrino oscillations, and is not able to explain the matter-antimatter asymmetry in the universe. It is therefore hoped that an extension can be found that would solve the questions left unanswered by the Standard Model. 
 
 There are a number of possible extensions to the Standard Model that can potentially solve a number of these issues, each providing varying predictions and theoretical frameworks, but none are currently supported by experimental evidence. Many of these extensions, such as Grand Unified Theories, or GUTs, involve the addition of extra gauge groups or embedding the Standard Model symmetries in a single larger gauge group.
 
-Some of the most theoretically appealing models motivating this paper are $Z$' models based on the  $E_6$ gauge group. These GUT could break down via the patterns \cite{ExtraGaugeBosonsE6}
+Some of the most theoretically appealing models motivating this paper are $Z'$ models based on the  $E_6$ gauge group. These GUT could break down via the patterns \cite{ExtraGaugeBosonsE6}
 \begin{equation}
 E_{6} \rightarrow SO(10) \otimes U(1)_\Psi \rightarrow SU(5)\otimes U(1)_\chi \otimes U(1)_\Psi
 \end{equation}
@@ -97,13 +104,14 @@ Z & = \sin\theta Z_1 + \cos\theta Z_2. \\
 \end{split}
 \end{equation}
 
-This is analagous to how the photon and Standard Model Z boson are made up of a linear combination of the $W^{0}_\mu$ and $B_\mu$ bosons from the electroweak group $SU(2)_L \otimes U(1)_Y$. The $Z'$ mass is predicted to be on the order of $1\,$TeV. This is within range of the LHC, unlike other GUT bosons such as the X and Y meaning that direct searches for GUT particles is possible rather than relying on indirect searches such as proton decay.
+This is analogous to how the photon and Standard Model Z boson are made up of a linear combination of the $W^{0}_\mu$ and $B_\mu$ bosons from the electroweak group $SU(2)_L \otimes U(1)_Y$. The $Z'$ mass is predicted to be on TeV scale; this is within range of the LHC, unlike other GUT bosons such as the X and Y meaning that direct searches for GUT particles are possible rather than relying on indirect searches such as proton decay.
 
 \section{ATLAS Detector}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{sec:ATLAS}
 
-The Large Hadron Collider, or LHC, is the world's highest energy particle accelerator, with a circumference of $27\,$km and max attainable centre of mass energy of $13\,$TeV. 
-ATLAS (A Toroidal LHC ApparatuS) \cite{ATLAS}, as seen in Figure (\ref{fig:ATLASDiagram}), is one of the two general purpose detectors at the LHC, the other being CMS (Compact Muon Solenoid). The ATLAS detector is made up of several distinct components, each with a different task. As it is important to understand how ATLAS works when analysing the data taken from the detector, this section will give an overview of how ATLAS functions and the general principles behind it. Section \ref{sec:ATLAS_DetectorSchematics} covers the main components of the ATLAS detector and how they function.
+The Large Hadron Collider, or LHC, is the world's highest energy particle accelerator, with a circumference of $27\,$km and maximum attainable centre of mass energy of $13\,$TeV. 
+ATLAS (A Toroidal LHC ApparatuS) \cite{ATLAS}, as seen in Figure (\ref{fig:ATLASDiagram}), is one of the two general purpose detectors at the LHC, the other being CMS (Compact Muon Solenoid). The ATLAS detector is made up of several distinct components, each with a different task. As it is important to understand how ATLAS works when analysing the data taken from the detector, this section will give an overview of how ATLAS functions and the general principles behind it. Section \ref{sec:ATLAS_DetectorSchematics} covers the main components of the ATLAS detector and how they function, while Section \ref{sec:ATLAS_Trigger} introduces the ATLAS trigger system.
+
 
 \begin{figure}[h]
     \centering
@@ -114,9 +122,11 @@ ATLAS (A Toroidal LHC ApparatuS) \cite{ATLAS}, as seen in Figure (\ref{fig:ATLAS
 \subsection{Detector Schematics}
 \label{sec:ATLAS_DetectorSchematics}
 
-The ATLAS detector is described in terms of a right handed coordinate system with an orgin at the nominal interaction point in the centre of the detector. The positive $x$ direction is defined as pointing from the nominal interaction point to the centre of the LHC ring, and the positive $y$ direction being up. The $z$ axis is parallel to the beam direction, with the azimuthal angle $\phi$ measured around the $z$ beam axis, and the polar angle $\theta$ in the $x-y$ plane. The pseudorapidity is defined as $\eta = -\ln\tan(\theta/2)$ \cite{ATLASReview}.
+The ATLAS detector is described in terms of a right handed coordinate system with an origin at the nominal interaction point in the centre of the detector. The positive $x$ direction is defined as pointing from the nominal interaction point to the centre of the LHC ring, with the positive $y$ direction being up. The $z$ axis is parallel to the beam direction, with the azimuthal angle $\phi$ measured around the $z$ beam axis, and the polar angle $\theta$ in the $x-y$ plane. The pseudorapidity is defined as $\eta = -\ln\tan(\theta/2)$ \cite{ATLASReview}.
 
-The ATLAS detector is composed of an Inner Detector (ID) tracking system composed of pixel/SCT and TRT detectors surrounded by a solenoidal magnet providing a magnetic field of $2\,$T, and electromagnetic and hadronic sampling calorimeters in the outer regions. A calorimeter is designed to measure the energy of an incident particle by completely absorbing its initial energy and then analysing the impact of this absorption.
+The ATLAS detector is composed of an Inner Detector (ID) tracking system composed of pixel/SCT and TRT detectors surrounded by a solenoidal magnet providing a magnetic field of $2\,$T, and electromagnetic and hadronic sampling calorimeters in the outer regions. A calorimeter is designed to measure the energy of an incident particle by completely absorbing its initial energy and then analysing the impact of this absorption. Finally, a muon spectrometer surrounds the detector to identify muons and accurately measure their momenta. 
+
+As seen in Figure \ref{fig:DetectorCrossSection}, different particles leave varying tracks in each element of the detector. Therefore, it is important
 
 \begin{figure}[h]
     \centering
@@ -150,7 +160,7 @@ component&radius[m]&length[n]&$\eta$-coverage\\
 The ATLAS Inner Detector is used to provide accurate position resolution of charged particles as they pass through. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The innermost part of ATLAS consists of three layers of silicon pixels surrounding the beampipe, forming over 80 million radiation hardened pixels. \cite{ATLASPixelDetector}. The pixel detector is made up of around 1,700 modules. Each module is a silicon sensor approximately $2\times6\,\rm{cm}^2$ in dimension, which is divided subdivided into around 47,000 pixels individually connected to 16 front end chips. The smallest pixel unit is around $50\mu\,$m by $400\mu\,$m. This provides a very high position resolution close to the interaction point. 
+The innermost part of ATLAS consists of three layers of silicon pixels surrounding the beampipe, forming over 80 million radiation hardened pixels \cite{ATLASPixelDetector}. The pixel detector is made up of around 1,700 modules, where each module is a silicon sensor approximately $2\times6\,\rm{cm}^2$ in dimension, which is subdivided into around 47,000 pixels individually connected to 16 front end chips. The smallest pixel unit is around $50\mu\,$m by $400\mu\,$m. This provides a very high position resolution close to the interaction point. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The middle part of inner detector is a Semi-Conductor Tracker made (SCT) made of silicon microstrip layers\cite{ATLASReview},  providing a high granularity at larger radii. The output of this subdetector component is binary, providing whether it has been hit or not as opposed to the number of hits at that layer.
 
@@ -165,44 +175,44 @@ r = \frac{\underline{p}}{\underline{B}q}.
 \label{sec:ATLAS_DetectorSchematics_Presampler}
 
 As the particles generated in an event pass through the detector, they lose energy through a variety of processes such as ionisation and nuclear interactions.
-As the material in front of the electromagnetic calorimeter amounts to around $1.5X_0$ on average, the barrel and encap calorimeters are accompanied by a presampler detector that covers a pseudorapidity of up to $|\eta| = 1.8$ \cite{EMCParticleIdentification}. The presampler has a thickness of the order of $X_0$, and is designed to estimate the energy lost upstream of the calorimeters, especially in the cryostatm and magnet. This is done on an event by event basis, and is required for obtaining accurate information about the initial energy of the final state particles.
+As the material in front of the electromagnetic calorimeter amounts to around $1.5X_0$ on average, the barrel and end-cap calorimeters are accompanied by a presampler detector that covers a pseudorapidity of up to $|\eta| = 1.8$ \cite{EMCParticleIdentification}. The presampler has a thickness of the order of $X_0$, and is designed to estimate the energy lost upstream of the calorimeters, especially in the cryostat and magnet. This is done on an event by event basis, and is required for obtaining accurate information about the initial energy of the final state particles.
 
 \subsubsection{Electromagnetic Calorimeter}
 \label{sec:ATLAS_DetectorSchematics_ECAL}
 
 The energy of a photon or electron produced in the proton-proton collision is measured by analysing the electromagnetic shower produced as the particle passes through the EM calorimeter. 
 
-At energies above $100\,$MeV, the energy loss of a photon passing through a medium is dominated by electron-positron pair production, while electrons lose their energies almost exclusively from bremmstrahlung \cite{RPP}. 
-Bremmstrahlung, or `braking radiation', is the electromagnetic radiation that is emmitted when a charged particle is decelerated as it is deflected by another charged particle, such as an electron scattering off a nucleus in the medium it is travelling through. This causes the emission of a photon, which can undergo $e^+e^-$ pair production. These produced electrons can, in turn, lose energy via bremmstrahlung, continuing until the particle energy is below some critical energy $E_c$. This is the energy scale at which bremmstrahlung is no longer the dominant but is instead surpassed by ionisation, and can be approximated by 
+At energies above $100\,$MeV, the energy loss of a photon passing through a medium is dominated by electron-positron pair production, while electrons lose their energies almost exclusively through bremsstrahlung \cite{RPP}. 
+Bremsstrahlung, or `braking radiation', is the electromagnetic radiation that is emitted when a charged particle is decelerated as it is deflected by another charged particle, such as an electron scattering off a nucleus in the medium it is traveling through. This causes the emission of a photon, which can undergo $e^+e^-$ pair production. These produced electrons can, in turn, lose energy via bremsstrahlung, continuing until the particle energy is below some critical energy $E_c$. This is the energy scale at which bremsstrahlung is no longer the dominant but is instead surpassed by ionisation.
 
 As ionisation is now the dominant process for electrons, these particles will stop within a radiation length. However, photons of the same energy are able to continue much further. Therefore, to absorb the majority of bremsstrahlung photons around 7-9 additional radiation lengths of material is required. These `soft' photons escaping the calorimeter are the main cause of energy leakage.
 
 As will be seen in the next section, hadrons are also capable of producing showers of particles through strong interactions. It is important, therefore, to be confident that the shower is due to electromagnetic interactions
-The development of em and hadronic showers is dependant on the radiation length and nuclear interaction length respectively. At an atomic number of 82, such as for lead used in as the passive layers in the electromagnetic calorimeter, the nuclear interation length is around 30 times larger than that of the radiation length. Therefore, any shower produced in the electromagnetic calorimeter will be caused by electrons or photons rather than hadrons.
+The development of em and hadronic showers is dependent on the radiation length and nuclear interaction length respectively. At an atomic number of 82, such as for lead used in as the passive layers in the electromagnetic calorimeter, the nuclear interaction length is around 30 times larger than that of the radiation length. Therefore, any shower produced in the electromagnetic calorimeter will be caused by electrons or photons rather than hadrons.
 
-As opposed to a homogenous calorimeter, which uses its entire volume of a material such as NaI or lead glass to detect energy loss of an incident particle, the EMC at ATLAS uses sampling calorimeters formed of layers of lead absorbing plates surrounded by steel plates to provide mechanical strength, interspaced with liquid argonn (LAr) sampling detectors to measure the shower at this point. The advantage of a sampling detector is that a dense material can be used in the absorbing regions with a short radiation length to create a large shower within a short distance with a few sampling layers at various points in the shower evolution. This means the calorimeter is able to be more compact and is cheaper compared to a homogenous detector. 
-The EM calorimeter covers a pseudorapidity range of $|\eta|<3.2$ throughout the entire azimuthal angle. Both the barrel and endcap regions have three layers of liquid argon detectors, located at a depth of $3X_0$, $6X_0$ and $16X_0$ \cite{ATLASCalorimetry}. The total thickness of the calorimeter is more than $22X_0$ in the barrel and more than $24X_0$ in the endcap.
+As opposed to a homogeneous calorimeter, which uses its entire volume of a material such as NaI or lead glass to detect energy loss of an incident particle, the EMC at ATLAS uses sampling calorimeters formed of layers of lead absorbing plates surrounded by steel plates to provide mechanical strength, interspaced with liquid argon (LAr) sampling detectors to measure the shower at this point. The advantage of a sampling detector is that a dense material can be used in the absorbing regions with a short radiation length to create a large shower within a short distance with a few sampling layers at various points in the shower evolution. This means the calorimeter is able to be more compact and is cheaper compared to a homogeneous detector. 
+The EM calorimeter covers a pseudorapidity range of $|\eta|<3.2$ throughout the entire azimuthal angle. Both the barrel and end-cap regions have three layers of liquid argon detectors, located at a depth of $3X_0$, $6X_0$ and $16X_0$ \cite{ATLASCalorimetry}. The total thickness of the calorimeter is more than $22X_0$ in the barrel and more than $24X_0$ in the end-cap.
 
 \subsubsection{Hadronic Calorimeter}
 \label{sec:ATLAS_DetectorSchematics_HCAL}
 
 %https://www.physics.utoronto.ca/~krieger/procs/Krieger_NSS05_Proc.pdf
-Hadronic showers, while analagous to their electromagnetic counterparts, are much more complicated due to the number of different processes that may occur, some of which meaning that parts of the hadronic showers are electron cascades. Given that the nuclear interaction length is larger than the radiation length, hadronic calorimeters are required to be significantly larger than electromagnetic calorimeters to fully absorb the energy of an incident particle.
+Hadronic showers, while analogous to their electromagnetic counterparts, are much more complicated due to the number of different processes that may occur, some of which meaning that parts of the hadronic showers are in fact electron cascades. Given that the nuclear interaction length is larger than the radiation length, hadronic calorimeters are required to be significantly larger than electromagnetic calorimeters to fully absorb the energy of an incident particle.
 
 As a high energy hadron passes through a block of matter, it may ionise the medium in a manner similar to a muon. However, at some point the hadron may interact strongly with a nucleus in the medium; this could cause new particles to be produced or the identity of the hadron to change. The nucleus it interacts with could also be affected, potentially losing some of its nucleons through spallation or decaying from an excited state through photon emission. Some of the hadrons produced in a shower, such a $\pi^0$, decay electromagnetically through decay channels such as $\pi^0\rightarrow\gamma\gamma$. These decay products, unlike the hadrons, are able to produce an electron cascade, meaning that hadron showers are often composed of an element of an electromagnetic shower. On average, around a third of the mesons produced in the first generation of nuclear interactions are $\pi^0$s \cite{CalorimetryWigmans}. The remaining hadrons may continue to produce $\pi^0$s in the following interactions provided they are energetic enough. Unlike the electromagnetic showers, in which an electron may produce a photon which can pair produce an electron positron pair, the production of a $\pi^0$ by a meson is not a reversible process. For a more energetic incident hadron, more $\pi^0$s can be produced in the later interactions. This means that the proportion of the initial energy contained in $\pi^0$s, and hence the proportion of the total energy lost through electromagnetic showers gradually increases with the incident particle energy.
 
 Unlike with photons and electrons, where all of the initial energy is eventually used to ionise the surrounding medium and provide a measurable signal, one of the consequences of the strong interaction being involved in hadronic showers is that some of the energy dissipated in the medium is fundamentally unmeasurable. Certain particles, such as muons or neutrinos that could be produced in meson decay, interact through neither the strong force nor produce electromagnetic showers, and so are able to carry away a fraction of energy from the calorimeter. The ratio of visible energy to total incident energy varies due to the incident particle as well as fluctuations in the number of charged to neutral pions, producing a larger uncertainty associated with the measured energy of the incident particle. While this can be compensated with certain methods such as weighting the output of individual counters, the overall resolution of a hadronic calorimeter is generally worse than that of an electromagnetic calorimeter.
 
-The hadronic calorimeter at ATLAS works on a similar process to the EM calorimeter. In the pseudorapidity range $|\eta|<1.6$, the HCAL is composed of an iron scintillating tile detector (TileCal) \cite{ATLASCalorimetry}. It uses iron plates as an absorber and plastic scintillating tiles as the active material. Scintillation light in the tiles is transmitted by wavelength shifting fibres to photomultiplier tubes (PMTs). The total thickness of the calorimeter is chosen as to contain as much of the shower as possible, reducing the background in the muon spectrometer to acceptable levels. 
+The hadronic calorimeter at ATLAS works on a similar process to the EM calorimeter. In the pseudorapidity range $|\eta|<1.6$, the HCAL is composed of an iron scintillating tile detector (TileCal) \cite{ATLASCalorimetry}. It uses iron plates as an absorber and plastic scintillating tiles as the active material. Scintillation light in the tiles is transmitted by wavelength shifting fibers to photomultiplier tubes (PMTs). The total thickness of the calorimeter is chosen as to contain as much of the shower as possible, reducing the background in the muon spectrometer to acceptable levels. 
 
-For $|\eta|>1.6$ the hadronic calorimeter is an LAr calorimeter in between copper plate absorbers. While the process is mainly the same as for the electromagnetic calorimeter, it is not formed in an accordian shape.
+For $|\eta|>1.6$ the hadronic calorimeter is an LAr calorimeter in between copper plate absorbers. While the process is mainly the same as for the electromagnetic calorimeter, it is not formed in an accordion shape.
 
 \subsubsection{Muon Spectrometer}
 \label{sec:ATLAS_DetectorSchematics_Muon}
 
 The muon is one of the two particles, the other being the neutrino, that is able to penetrate beyond the hadronic calorimeter, as they do not emit either a hadronic or electromagnetic shower. Instead, the muon leaves a charged track in these subdetectors. The role of the muon spectrometer is to provide a high precision measurement of the energy and momenta of muons as they pass through, as they are often important in rare processes and contribute to the overall energy resolution of the detector.
 
-The muon spectromer is somewhat similar to the inner detector in that it is centered around measuring the momentum of particles through the radius of curvature as the particle is deflected in the field of a superconducting magnet. In order to increase the precision of the momentum measurement the subdetector is required to be large enough to accurately determine the radius of the muon's curvature, with 1200 Monitered Drift Tubes and multiwire proportional counters located between a radius of $4.25\,$m out to the edge of the detector at $11\,$m \cite{ATLASMuonSpectrometer}. The spectrometer is able to measure the momentum of $100\,$GeV muons with an accuracy of $3\%$ and $1\,$TeV muons with an accuracy of $10\%$.
+The muon spectrometer is somewhat similar to the inner detector in that it is centered around measuring the momentum of particles through the radius of curvature as the particle is deflected in the field of a superconducting magnet. In order to increase the precision of the momentum measurement the subdetector is required to be large enough to accurately determine the radius of the muon's curvature, with 1200 Monitored Drift Tubes and multiwire proportional counters located between a radius of $4.25\,$m out to the edge of the detector at $11\,$m \cite{ATLASMuonSpectrometer}. The spectrometer is able to measure the momentum of $100\,$GeV muons with an accuracy of $3\%$ and $1\,$TeV muons with an accuracy of $10\%$.
 
 \subsection{Trigger System}
 \label{sec:ATLAS_Trigger}
@@ -215,11 +225,11 @@ The LHC has an event rate on the order of $10^7\,$Hz, meaning that a large numbe
     \caption{ Diagram showing the different layers of the ATLAS trigger system as it filters out events. The event rates at different parts in the process are shown.\label{fig:TDAQ} }
 \end{figure}
 
-This is the job of the trigger system, which at ATLAS is divided into 3 seperate parts, these being Level 1, Level 2 and Event Filtering, denoted as `L1',`L2' and `EF' respectively.  Each level refines the decision made at the previous level through applying additional information and criteria. The L1 trigger is hardware based, while L2 and EF are software based and known together as the High Level Trigger, or HLT. The ATLAS trigger system is visualised in Figure \ref{fig:TDAQ}.
+This is the job of the trigger system, which at ATLAS is divided into 3 separate parts, these being Level 1, Level 2 and Event Filtering, denoted as `L1',`L2' and `EF' respectively.  Each level refines the decision made at the previous level through applying additional information and criteria. The L1 trigger is hardware based, while L2 and EF are software based and known together as the High Level Trigger, or HLT. The ATLAS trigger system is visualised in Figure \ref{fig:TDAQ}.
 
 The L1 trigger uses the lower latencies of the hardware and identifies regions of interest that may potentially contain interesting events such as muons or electrons with high transverse momenta or missing energy. As the Level 1 trigger is required to make a decision in around $2.5\,\mu$s, only certain parts of the detector are used, with the inner detector information not being used due to time constraints. The L1 trigger reduces the event rate to around $70\,$kHz. The coordinates $\eta$ and $\phi$ of the region of interest are passed on to the next level.
 
-Using the data provided by the L1 trigger, the L2 level requests all relevant information for the specified region of interest including the inner detector. The L2 trigger level is able to distinguish electrons and photons from the existance of a track in the inner detector leading to the region of interest in the ECAL. Next, by identifying clusters in the calorimeters, the L2 trigger is able to make its decision by implementing algorithms based on the shower shape and track cluster matching. By doing this, the second trigger level is able to check if the region of interest exists when analysed at a higher resolution.
+Using the data provided by the L1 trigger, the L2 level requests all relevant information for the specified region of interest including the inner detector. The L2 trigger level is able to distinguish electrons and photons from the existence of a track in the inner detector leading to the region of interest in the ECAL. Next, by identifying clusters in the calorimeters, the L2 trigger is able to make its decision by implementing algorithms based on the shower shape and track cluster matching. By doing this, the second trigger level is able to check if the region of interest exists when analysed at a higher resolution.
 
 The event filter functions largely in the same way as L2, however implements a full reconstruction of the event, applying more stringent selection criteria to reduce the rate of events saved to permanent storage to a few hundred Hz.
 
@@ -230,7 +240,7 @@ The name of the trigger indicates the requirements for an event to pass it; in t
 \section{Study}
 \label{sec:Study}
 
-Fundamentally, in the analysis of the data from the experiment one is looking at the number of events satisfying a set of criteria as a function of the energy of that event. The number of events observed, $n$, is equal to the sum of the background events $b$, and the process that one is looking for, the signal $s$. The value obtained is $n$ is compared to the null hypothesis, which postulates an expected background $b_{expected}$ and no phenomena causing any signal events.
+Fundamentally, in the analysis of the data from the experiment one is looking at the number of events satisfying a set of criteria as a function of the energy of that event. The number of events observed, $n$, is equal to the sum of the background events $b$, and the process that one is looking for, the signal $s$. The value obtained for $n$ is compared to the null hypothesis, which postulates an expected background $b_{expected}$ and no phenomena causing any signal events.
 
 The $p\rm{-value}$ is the probability of observing $n_{obs}$ or more particles under the null hypothesis, that is the probability of observing a result equivalent to the observation made or more contradictory of the null hypothesis. Mathematically, this is expressed as
 
@@ -242,11 +252,19 @@ The null hypothesis is usually denoted as $H_0$, while the hypothesis that there
 
 If this is sufficiently small, the null hypothesis is rejected and a discovery is announced. In high energy physics, this boundary is usually at a $p\rm{-value}$ of $2.9\times10^{-7}$, which corresponds to the probability of quantity following a Poisson distribution being $5\sigma$ from the expectation value.
 
+This section aims to give an overview of the search for the $Z'$ boson before going into the simulated analysis. Section \ref{sec:study_previousLimits} identifies previous and ongoing searches for the $Z'$, as well as the current experimental limits. Section \ref{sec:study_mainBackgrounds} highlights the main backgrounds relevant to this search, while Section \ref{sec:study_MCS} covers how Monte Carlo simulated data will be used later on in the analysis.
+
+%\label{sec:study_previousLimits}
+%\label{sec:study_mainBackgrounds}
+%\label{sec:study_MCS}
 \subsection{Previous Searches for the $Z'$ and Current Experimental Limits}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{sec:study_previousLimits}
+
 
 The $Z'$ has been the focus of a number of searches at LEP and the LHC, and these experiments have previously set limits on the mass at which various $Z'$ bosons could exist. The experiment at CMS in 2015 set the lower limits on the $Z_{\rm{SSM}}'$ as $2.90\,$TeV and the superstring $Z_{\Psi}'$ at $2.57\,$TeV \cite{CMSDileptonSearch}. 
 
 \subsection{Main Backgrounds}%%%%%%%%%%%%%%%%%%%%%%
+\label{sec:study_mainBackgrounds}
 
 One of the main obstacles facing searches for potentially rare events at the LHC is that the background that may easily drown out any interesting signals if not accounted for. In an experiment, each type of background event can be described as being either reducible or irreducible in nature. Reducible background events, as the name suggests, are events whose frequency can be reduced or cut out entirely through applying certain cuts. These include jets that fake electron signals or top-antitop events which can decay to pair of electrons. Irreducible background events, on the other hand, are those that are, for all intents and purposes, fundamentally indistinguishable from the signal events that are being looked for. 
 
@@ -275,7 +293,7 @@ One of the main obstacles facing searches for potentially rare events at the LHC
     \caption{Feynman diagrams of the leading order SM processes contributing to the background of the search for the $Z'$. The most signficant contribution comes from the Drell-Yan process, seen in (a). (b) shows the Drell-Yan process with a jet background from the emission of gluons, with (c) being the photon induced production of a dilepton pair. The top-antitop contribution is seen in (d).\label{fig:bckgFeynman2}}
 \end{figure}
 
-Feynman diagrams displaying the dominant processes contributing to the background in the experiment are shown in Figure \ref{fig:bckgFeynman}. Figures \ref{fig:bckgFeynman_DY} and \ref{fig:bckgFeynman_DY_bck} show the Drell-Yan process, in which a quark and antiquark annihilate to produce to dilepton pair through an intermediate $Z$ boson or photon. This is the main source of background events in the search for a $Z'$ boson and is to a large extent irreducible. This is due to the difficulty in distinguishing a electron positron pair produced from a Z boson compared to a potential $Z'$ boson, as the $Z'$ would have very similar properties compared to its Standard Model equivalent, save for its larger mass. The photon induced process is seen in Figures \ref{fig:bckgFeynman_PI}, and produces a dilepton pair through the interaction of two photons. Shown in Figure \ref{fig:bckgFeynman_ttbar}, the top-antitop process involves a quarks and antiquarks producing a $t\overline{t}$ pair, which undergo flavour changing through the emmission of a $W$ boson. These $W$ bosons then may produce a electron-neutrino pair.
+Feynman diagrams displaying the dominant processes contributing to the background in the experiment are shown in Figure \ref{fig:bckgFeynman}. Figures \ref{fig:bckgFeynman_DY} and \ref{fig:bckgFeynman_DY_bck} show the Drell-Yan process, in which a quark and antiquark annihilate to produce to dilepton pair through an intermediate $Z$ boson or photon. This is the main source of background events in the search for a $Z'$ boson and is to a large extent irreducible. This is due to the difficulty in distinguishing a electron positron pair produced from a Z boson compared to a potential $Z'$ boson, as the $Z'$ would have very similar properties compared to its Standard Model equivalent, save for its larger mass. The photon induced process is seen in Figures \ref{fig:bckgFeynman_PI}, and produces a dilepton pair through the interaction of two photons. Shown in Figure \ref{fig:bckgFeynman_ttbar}, the top-antitop process involves a quarks and antiquarks producing a $t\overline{t}$ pair, which undergo flavour changing through the emission of a $W$ boson. These $W$ bosons then may produce a electron-neutrino pair.
 
 \begin{figure}[htb]
     \centering
@@ -305,8 +323,8 @@ Feynman diagrams displaying the dominant processes contributing to the backgroun
 Additional processes are shown in Figure \ref{fig:bckgFeynman}. Figure \ref{fig:bckgFeynman_wJets} shows $W+\rm{jet}$, . Figures \ref{fig:bckgFeynman_WW}, \ref{fig:bckgFeynman_WZ} and \ref{fig:bckgFeynman_ZZ} are the diboson processes $W^+W^-$, $WZ$ and $ZZ$ respectively.
 
 \subsection{Use of Monte Carlo Simulations}%%%%%%%%
-
-Before performing an experiment and investing a large amount of time and resources into it, it is often very useful to utilise Monte Carlo simulations in order to gain an idea of the output of an experiment. A Monte Carlo simulations utilise psuedo-random number generation to mimic probability distributions that govern the properties of a particle.
+\label{sec:study_MCS}
+Before performing an experiment and investing a large amount of time and resources into it, it is often very useful to utilise Monte Carlo simulations in order to gain an idea of the output of an experiment. A Monte Carlo simulations utilise pseudo-random number generation to mimic probability distributions that govern the properties of a particle.
 
 These simulations are important as they allow the user to estimate a variety of important variables in the experiment, such as the expected number of signal events under a given set of conditions, the detector resolution and the discovery significance. A set of simulated samples will be analysed in order to gather information to optimise the search for the $Z'$. 
 
@@ -333,11 +351,13 @@ Some of the samples are `binned' in to certain mass regions in order to improve 
 
 The Monte Carlo samples in this paper have all been scaled to an integrated luminosity of $20.3\,\rm{fb}^{-1}$, which was the integrated luminosity of the LHC during the 2012 run.
 
-In total, four different sample sets were used in this paper. These were a Drell-Yan sample, binned into 14 subsets that ranged up to $3\,$TeV, a $Z'$ at $1.5$, $2$ and $2.5$ TeV, an unbinned diboson sample containing $WW$, $WZ$ and $ZZ$ events, and an unbinnned $t\overline{t}$ sample.
+In total, four different sample sets were used in this paper. These were a Drell-Yan sample, binned into 14 subsets that ranged up to $3\,$TeV, a $Z'$ at $1.5$, $2$ and $2.5$ TeV, an unbinned diboson sample containing $WW$, $WZ$ and $ZZ$ events, and an unbinned $t\overline{t}$ sample.
+
+
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.01]{images/DYBackground.png}
+    \includegraphics[scale=0.25]{images/DYBackground.png}
     \caption{The simulated background from Drell-Yan events using a loose selection criteria.}
 \end{figure}
 
@@ -351,6 +371,9 @@ t = \sum_{i=1}^{n}\alpha_i x_i < t_{cut}.
 
 Here, the optimum values of the coefficients $\alpha_i$ would have to be determined using some multivariate analysis technique.
 
+This is one of the main techniques by which background electrons are removed sample set. This section will cover the selection process by which signal events can be discriminated from background events. Section \ref{sec:cuts_selection} introduces the ATLAS electron selection criteria, which are a series of increasingly stringent categories used to remove background events such as jets. 
+Section \ref{Event Selection} will then go into the event selection criteria used to identify signal events.
+
 \subsection{ATLAS Electron Selection Criteria}
 \label{sec:cuts_selection}
 Loose, medium and tight refer to an increasingly stringent set of selection criteria for 'good' electrons that apply a set of cuts that are introduced in \cite{expectedElectronPerformance}.
@@ -361,7 +384,7 @@ Non-isolated electrons are true electrons originating from a meson decay, while 
 
 The jet rejection for loose, medium and tight is around 500, 5000 and $5\times10^4$  respectively \cite{ElectronPerformanceMeasurements}. The electron is reconstructed by associating an energy signature and track. The EM calorimeter identifies the energy via a clustering algorithm and associates it to a track. 
 
-The variables defining the loose, medium and tight criteria are shown in Tables \ref{table:looseVariables}, \ref{table:mediumVariables} and \ref{table:tightVariables}.
+The variables defining the loose and medium criteria are shown in Tables \ref{table:looseVariables}, \ref{table:mediumVariables}.
 
 \begin{table}[h!t]
 \caption{ Variables Associated with the loose selection criteria \cite{ElectronPerformanceMeasurements}\label{table:looseVariables}}
@@ -373,7 +396,7 @@ Acceptance &  $|\eta|<2.47$ &  	\\\hline
 \multirow{2}{*}{Hadronic Leakage} & Ratio of transverse energy $E_{\rm{T}}$ in the first layer hadronic calorimeter to $E_T$ of the EM cluster. Used in the ranges $|\eta|<0.8$ and $|\eta|<1.37$ & $R_{\rm{had,1}}$ \\\cline{2-3}
 & Ratio of $E_T$ in hadronic calorimeter to $E_T$ of the EM cluster. Used in the range $0.8<|\eta|<1.37$ & $R_{\rm{had}}$\\\hline
 \multirow{2}{*}{Middle Layer of EM calorimeter} & Ratio of the energy in $3\times7$ cells ($E237$) over the energy in $7\times7$ cells ($E277$) centred at the electron cluster position & $R_{\eta}$ \\\cline{2-3}
-& Lateral shower width, $ \sqrt{\frac{\sum E_i \eta_{i}^{2}}{\sum E_i} - \left( \frac{\sum\eta_i}{\sum E_i} \right)^2 }$ calculated over a window of $3\times5$ cells & $\omega_{\eta^2}$ \\\hline
+& Lateral shower width, $ \sqrt{\frac{\sum E_i \eta_{i}^{2}}{\sum E_i} - \left( \frac{\sum E_i \eta_i}{\sum E_i} \right)^2 }$ calculated over a window of $3\times5$ cells & $\omega_{\eta^2}$ \\\hline
 \end{tabular}
 \end{table}
 
@@ -384,7 +407,7 @@ Acceptance &  $|\eta|<2.47$ &  	\\\hline
 \hline
 \multicolumn{3}{|c|}{\textbf{Medium (includes loose with tighter requirements on shower shapes)}} \\\hline
 Type&Description&Name		    \\\hline
-\multirow{2}{*}{Strip layer of EM calorimeter} & Shower width, $\sqrt{ \frac{\sum E_i (i-i_{\rm{max}})^2 } {\sum E_i} }$, summed over the strups in a window of dimesions of $\Delta\eta\times\Delta\phi\approx 0.0625\times0.2$, corresponding typically to 20 strips in $\eta$, and $i_{\rm{max}}$ is the index of the highest-energy strip. & $\omega_{\rm{stot}}$ \\\cline{2-3}
+\multirow{2}{*}{Strip layer of EM calorimeter} & Shower width, $\sqrt{ \frac{\sum E_i (i-i_{\rm{max}})^2 } {\sum E_i} }$, summed over the strips in a window of dimensions of $\Delta\eta\times\Delta\phi\approx 0.0625\times0.2$, corresponding typically to 20 strips in $\eta$, and $i_{\rm{max}}$ is the index of the highest-energy strip. & $\omega_{\rm{stot}}$ \\\cline{2-3}
 & The energy deposition ratio $\frac{E_1/E_2}{E_1+E_2}$ where $E_1$ and $E_2$ are the largest and second largest energy depositions in the cluster. & $E_{\rm{ratio}}$ \\\hline
 \multirow{3}{*}{Track Quality} & Number of hits in the pixel detector ($\geq$1)&$n_{\rm{pixel}}$ \\\cline{2-3}
 & Number of total hits in the pixel and SCT detectors ($\geq$7) & $n_{\rm{Si}}$ \\\cline{2-3}
@@ -412,14 +435,14 @@ Track-cluster matching & $\Delta\eta$ between the cluster position in the strip 
 %\end{table}
 
 \subsection{Event Selection}
+\label{sec:cuts_eventSelection}
 
-For an event that passes the chosen trigger, there are a number of electrons may not be associated with the signal. Therefore, it is important to identify the dilepton pair associated with the $Z'$ decay if it is indeed present in the event. 
+For an event that passes the chosen trigger, there are a number of electrons that may not be associated with the signal. Therefore, it is important to identify the dilepton pair associated with the $Z'$ decay if it is indeed present in the event. 
 
-Firstly, a fiducial volume is defined by applying the cut $|\eta|<2.47$ to ensure that background radiation from the detector or external radiation is not included. Therefore electrons outside of this fiducial volume is rejected. 
-The electrons located in the crack between the barrel and endcap $1.37\leq|\eta|\leq1.52$.
-The transverse energy of the electron $E_T$ is required to be greater than than $30\,$GeV. 
-The electron is required to pass the required electron selection criteria, which initially will be the loose criteria.
-The two electrons with the highest $P_T$ sum are chosen, and the invariant mass of the pair is rejected if it is lower than $80\,$GeV.
+Firstly, a fiducial volume is defined by applying the cut $|\eta|<2.47$ to ensure that background radiation from the detector components or outside the detector is not included. Therefore electrons outside of this fiducial volume are rejected. 
+The electrons located in the crack between the barrel and end-cap $1.37\leq|\eta|\leq1.52$ are rejected due to the reduced energy resolution in this transition region. 
+The transverse energy of the electron $E_T$ is must be greater than $30\,$GeV, and the electron is required to pass the required electron selection criteria, which initially will be the loose criteria.
+The two electrons with the highest $P_T$ sum that pass these requirements are chosen, and the invariant mass of the pair is rejected if it is lower than $80\,$GeV.
 
 %For the highest $P_T$ and next highest $P_T$ electron, known as the leading and subleading electrons, a calorimeter cluster isolation requirement is applied, corresponding to two linear expressions
 
@@ -438,26 +461,21 @@ The two electrons with the highest $P_T$ sum are chosen, and the invariant mass 
     \caption{The number of simulated electrons passing each selection criteria in a given event. It can be seen that a significant number of simulated events contain more than 2 electrons passing the loose and medium selection criteria. \label{fig:nEl}}
 \end{figure}
 
-An additional requirement that may also be applied is that the two final state electrons must be of an opposite sign. Theoretically, this is required in order to ensure charge conservation, though the charge of a lepton may be incorrectly identified by the detector, potentially causing genuine signal events to be discarded. However, from Figure \ref{fig:nEl} it can be seen that a substantial amount of simulated events contain more than two electrons passing the loose and medium selection criteria. Therefore, in order to reduce the possibility of a background electron being misidentified as part of the dilepton final state, the charge requirement will be  invoked during the event selection process. The efficiencies when broken down by criteria can be seen in Table \ref{table:selectionEfficiency}, and as a function of invariant mass in Figure \ref{fig:acceptance}. It can be seen that the acceptance rates for Drell-Yan and $Z'$ events in Figure \ref{fig:acceptance} and very close; this is consistent with what is expected, as the 
+An additional requirement that may also be applied is that the two final state electrons must be of an opposite sign. Theoretically, this is required in order to ensure charge conservation, though the charge of a lepton may be incorrectly identified by the detector, potentially causing genuine signal events to be discarded. However, from Figure \ref{fig:nEl} it can be seen that a substantial amount of simulated events contain more than two electrons passing the loose and medium selection criteria. Therefore, in order to reduce the possibility of a background electron being misidentified as part of the dilepton final state, the charge requirement will be  invoked during the event selection process. The efficiencies when broken down by criteria can be seen in Table \ref{table:selectionEfficiency}, and as a function of invariant mass in Figure \ref{fig:acceptance}. It can be seen that the acceptance rates for Drell-Yan and $Z'$ events in Figure \ref{fig:acceptance} and very close; this is consistent with what is expected, as dilepton final states originating from $Z$ bosons will be very similar to those from a $Z'$.
 
 \begin{table}[h!t]
-\caption{The efficiency of the event selection process is broken down for various simulated samples. For each criteria, the percentage of initial events remaining once the selection criteria has been applied is shown, then after applying the constraints on invariant mass and opposite charge requirements. \label{table:selectionEfficiency}}
+\caption{The efficiency of the event selection process is shown for various samples. The cuts used in the process are broken down, showing the acceptance$\times$efficiency after cut has been applied. \label{table:selectionEfficiency}}
 \begin{tabular}{|c|c|c|c|c|c|c| } 
 \hline
-Criteria & $1.5\,\rm{TeV}\,\,Z'$ & $2.0\,\rm{TeV}\,\,Z'$ & $2.5\,\rm{TeV}\,\,Z'$ & Drell-Yan & Diboson & $t\overline{t}$ \\
-\hline
-\bf{Loose} & $(79.4\pm0.4)\%$ & $(80.5\pm0.4)\%$ & $(81.0\pm0.5)\%$ & $(73.2\pm0.1)\%$ & $(5.41\pm0.03)\%$ & \\
-Inv Mass & $(78.5\pm0.4)\%$ & $(79.7\pm0.4)\%$ & $(80.1\pm0.4)\%$ & $(72.1\pm0.1)\%$ & $(4.34\pm0.02)\%$ & \\
-Opp. Charge & $(72.9\pm0.4)\%$ & $(72.6\pm0.4)\%$ & $(72.2\pm0.4)\%$ & $(66.9\pm0.1)\%$ & $(4.11\pm0.03)\%$ & \\
-\hline
-\bf{Medium} & $(75.6\pm0.4)\%$ & $(76.4\pm0.4)\%$ & $(77.1\pm0.4)\%$ & $(69.6\pm0.1)\%$ & $(4.49\pm0.03)\%$ & \\
-Inv Mass & $(75.3\pm0.4)\%$ & $(76.1\pm0.4)\%$ & $(76.8\pm0.4)\%$ & $(69.2\pm0.1)\%$ & $(4.06\pm0.03)\%$ & \\
-Opp. Charge & $(69.8\pm0.4)\%$ & $(69.1\pm0.4)\%$ & $(69.1\pm0.4)\%$ & $(64.0\pm0.1)\%$ & $(3.94\pm0.03)\%$ & \\
-\hline
-\bf{Tight} & $(65.8\pm0.4)\%$ & $(66.8\pm0.4)\%$ & $(67.2\pm0.4)\%$ & $(59.8\pm0.1)\%$ & $(3.3\pm0.02)\%$ & \\
-Inv Mass & $(65.7\pm0.4)\%$ & $(66.8\pm0.4)\%$ & $(67.1\pm0.4)\%$ & $(59.8\pm0.1)\%$ & $(3.14\pm0.02)\%$ & \\
-Opp. Charge & $(61.3\pm0.4)\%$ & $(61.0\pm0.4)\%$ & $(60.8\pm0.4)\%$ & $(55.7\pm0.1)\%$ & $(3.07\pm0.02)\%$ & \\
-\hline
+\multirow{2}{*}{Variable}  & \multicolumn{6}{|c|}{Acceptance$\times$Efficiency ($\%$)}\\\cline{2-7}
+& $1.5\,$TeV $Z'$ & $2\,$TeV $Z'$ & $2.5\,$TeV $Z'$ & Drell-Yan & Diboson & $t\overline{t}$ \\\hline
+Acceptance & $96.7\pm0.5$ & $97.3\pm0.5$ & $97.4\pm0.5$ & $86\pm1$ & $83.8\pm0.2$ & $99.5\pm0.3$ \\\hline
+Invariant Mass & $90.7\pm0.5$ & $92.4\pm0.5$ & $93.1\pm0.5$ & $54.8\pm0.9$ & $10.73\pm0.07$ & $18.5\pm0.1$ \\\hline
+$P_T$ & $84.7\pm0.5$ & $86.1\pm0.5$ & $87.2\pm0.5$ & $47.4\pm0.9$ & $5.25\pm0.05$ & $12.4\pm0.1$ \\\hline
+Charge & $77.1\pm0.4$ & $77.0\pm0.4$ & $77.2\pm0.4$ & $43.5\pm0.8$ & $3.61\pm0.04$ & $6.72\pm0.08$ \\\hline
+Loose & $72.1\pm0.4$ & $71.6\pm0.4$ & $71.3\pm0.4$ & $39.4\pm0.8$ & $1.66\pm0.02$ & $0.53\pm0.02$ \\\hline
+Medium & $68.9\pm0.4$ & $68.0\pm0.4$ & $68.1\pm0.4$ & $36.8\pm0.8$ & $1.48\pm0.02$ & $0.44\pm0.02$\\\hline
+Tight & $60.8\pm0.4$ & $60.3\pm0.4$ & $60.0\pm0.4$ & $29.5\pm0.7$ & $1.14\pm0.02$ & $0.34\pm0.02$\\\hline
 \end{tabular}
 \end{table}
 
@@ -478,14 +496,14 @@ Opp. Charge & $(61.3\pm0.4)\%$ & $(61.0\pm0.4)\%$ & $(60.8\pm0.4)\%$ & $(55.7\pm
     \caption{ The $\rm{acceptance}\times\rm{efficiency}$ is plotted as a function of energy for the Drell-Yan and $Z'$ samples. It can be seen that the fractional number of events that are identified are approximately equal. \label{fig:acceptance}}
 \end{figure}
 
-
-
 \section{Monte Carlo Simulated Analysis}
 \label{sec:MonteCarloSimulatedAnalysis}
 
+The 
+
 \subsection{$Z'$ Simulated Events}
  
-As there is a range of masses at which the $Z'$ could appear, it is important to study samples at various masses in order to determine the most appropriate search conditions for the experiment. Three different $Z'$ sample sets were used in this paper, at masses of $1500\,$GeV, $2000\,$GeV and $2500\,$GeV. While these masses have been ruled out by previous searches, it is still useful to use these samples as the information provided is stil relevant to searches at higher masses. 
+As there is a range of masses at which the $Z'$ could appear, it is important to study samples at various masses in order to determine the most appropriate search conditions for the experiment. Three different $Z'$ sample sets were used in this paper, at masses of $1500\,$GeV, $2000\,$GeV and $2500\,$GeV. While these masses have been ruled out by previous searches, it is still useful to use these samples as the information provided is still relevant to searches at higher masses. 
 
 A resonant peak occurs in an experiment as the cross section for the production of a particle, in this case a $Z'$ boson, increases in a certain energy range. The width of the resonance peak is related to the lifetime of the $Z'$ through the equation 
 
@@ -562,7 +580,7 @@ From the table, it can be calculated that the average width of the $Z'$ peak as 
 
 In order to claim a discovery, a signal must be detected to a significance of $5\sigma$. Therefore, it is important to modify the search such that the maximum significance can be achieved for a given number of signal events. In this section, the Monte-Carlo data will be analysed to determine the optimum method of discovery.
 
-There are a number of different means of analysis that can be undertaken to search for the existance of a new particle. Firstly, the obtained data could be fitted to a template representing the expected distribution of events for a particle predicted by a given model. However, this is a model dependant means of searching for new particles. A more model independant approach is by looking at the number of events $n$ within a window covering a certain energy range, and comparing the number of events observed to the expected background. Another approach is to count the number of events that occur above a critical energy. These two approaches will be compared in this section.
+There are a number of different means of analysis that can be undertaken to search for the existence of a new particle. Firstly, the obtained data could be fitted to a template representing the expected distribution of events for a particle predicted by a given model. However, this is a model  means of searching for new particles. A more model independent approach is by looking at the number of events $n$ within a window covering a certain energy range, and comparing the number of events observed to the expected background. Another approach is to count the number of events that occur above a critical energy. These two approaches will be compared in this section.
 
 As described in \cite{Cowan:2010js}, the median discovery significance $Z_0$ for an experiment with a known background can be expressed as
 
@@ -598,7 +616,7 @@ Using Equation \ref{eqn:asimov}, the median discovery significance is calculated
     \caption{ (a) The discovery significance of a $1500\,$GeV $Z'$ is plotted as a function of the width of the search region, centered around the $Z'$ peak. It can be seen that the discovery significance plateus at around $120\,$GeV. (b) The discovery significance of the $1500\,$GeV $Z'$ is calculated, using the entire region above a given energy to search in. It can be seen that the overall significance is slightly less than using a search window. \label{fig:DiscoverySignificance}}
 \end{figure}
 
-These two methods can be seen in Figure \ref{fig:DiscoverySignificance}. In \ref{fig:DS1500}, it can be seen that the discovery significance reaches a maximum at a window width of around $170\,$GeV. The optimum width appears to be independant of the selection criteria used; this is consistent with what is expected as the Drell-Yan background is irreducible, and the $\rm{acceptance}\times\rm{efficiency}$ as a function of invariant mass follows the same general form for both Drell-Yan and $Z'$ leptons. Therefore, applying a stricter criteria will simply scale the DY background  and signal values by a certain factor. 
+These two methods can be seen in Figure \ref{fig:DiscoverySignificance}. In \ref{fig:DS1500}, it can be seen that the discovery significance reaches a maximum at a window width of around $170\,$GeV. The optimum width appears to be independent of the selection criteria used; this is consistent with what is expected as the Drell-Yan background is irreducible, and the $\rm{acceptance}\times\rm{efficiency}$ as a function of invariant mass follows the same general form for both Drell-Yan and $Z'$ leptons. Therefore, applying a stricter criteria will simply scale the DY background  and signal values by a certain factor. 
 
 
 In Figure \ref{fig:IDS1500}, the discovery significance for the open cut method is plotted as a function of the critical energy. It can be seen that the maximum discovery significance obtained using this method is only slightly lower than using a search window. This is somewhat un-intuitive as one would naturally expect the number of additional background events obtained at energies above the $Z'$ peak to substantially reduce the discovery significance obtained. However, given that the Drell-Yan background becomes increasingly small at higher energies and the fairly high cross section of the SSM $Z'$, this suppresses the impact of the additional background events decreasing the significance.
@@ -625,9 +643,9 @@ $Z'$ mass (GeV) &  ID Criteria & Best Search Width (GeV) & Maximum $Z_0$ & Best 
 
 \subsection{Variables and Linear Cuts}
 
-In this section, lepton variables are investigated and possible linear cuts are introduced in order to cut out background events while maintaing as much of the signal as possible. The variables plotted are the background spectrum for Drell-Yan, $t\overline{t}$ and diboson events as well as a $Z'$ at $1.5\,$TeV.
+In this section, lepton variables are investigated and possible linear cuts are introduced in order to cut out background events while maintaining as much of the signal as possible. The variables plotted are the background spectrum for Drell-Yan, $t\overline{t}$ and diboson events as well as a $Z'$ at $1.5\,$TeV.
 
-\subsubsection{Transverse Energy}
+\subsubsection{Transverse Energy and $E/P$}
 
 The transverse energy $E_T$ is the component of energy perpendicular to the beam line and is defined as 
 
@@ -635,15 +653,26 @@ The transverse energy $E_T$ is the component of energy perpendicular to the beam
 E_{T} = \sqrt{m^2 + P_{T}^2},
 \end{equation}
 
-where $m$ is the mass of the particle and $P_T$ is the transverse momenta. Given that the two beams of protons are colliding head on, the longtitudinal compontent of momentum is neglibigle. However, the individual partons inside the protons colliding together may themselves have some transverse component. High $P_T$ events often indicate interesting physical processes.
+where $m$ is the mass of the particle and $P_T$ is the transverse momenta. Given that the two beams of protons are colliding head on, the longtitudinal component of momentum is negligible. However, the individual partons inside the protons colliding together may themselves have some transverse component. High $P_T$ events often indicate interesting physical processes.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.25]{images/variables/Et.png}
-    \caption{The transverse energy is plotted for various samples. The dashed line shows the minimum cut on $E_T$, which is placed at $200\,$GeV. \label{fig:Et} }
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[height=0.6\textwidth]{images/variables/Et.png}
+        \caption{}
+        \label{fig:Et}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[height=0.6\textwidth]{images/variables/EP.png}
+        \caption{}
+        \label{fig:EP}
+    \end{subfigure}
+    \caption{(a) The electron transverse energies for the reconstructed pair is plotted for various samples. The dashed line shows the minimum cut on $E_T$, which is placed at $200\,$GeV. (b) The ratio of the dilepton pair's energy to its momentum. A minimum cut is placed at $1.2\,$.\label{fig:EtEP}}
 \end{figure}
 
-As can be seen in Figure \ref{fig:Et}, a large amount of the low mass Drell-Yan dilepton pairs and background events can be removed by appling a minimum cut on the transverse energy at $200\,$GeV. 
+As can be seen in Figure \ref{fig:Et}, a large amount of the low mass Drell-Yan dilepton pairs and background events can be removed by applying a minimum cut on the transverse energy at $200\,$GeV. 
+
+The ratio of the dilepton pair's energy to momentum can be seen in Figure \ref{fig:EP}. The value $E/P$ effectively measures how much of a particle's energy is contained within its momentum as opposed to its invariant mass. A minimum cut is placed here at a value of $1.2\,$.
 
 \subsubsection{Coordinates $\phi$ and $\eta$}
 
@@ -690,7 +719,13 @@ The distributions for $R_{\eta}$ and $R_{\phi}$ can be seen in Figures \ref{fig:
 
 \subsubsection{Lateral Width, $W_{\eta^2}$}
 
-The lateral width
+The lateral shower width $W_{\eta^2}$, is determined through the equation 
+
+\begin{equation}
+W_{\eta^2} = \sqrt{\frac{\sum E_i \eta_{i}^{2}}{\sum E_i} - \left( \frac{\sum E_i \eta_i}{\sum E_i} \right)^2 }.
+\end{equation}
+
+$W_{\eta^2}$ is calculated in a window of $3\times5$ cells using a weighted sum over the cells, depending on the particle impact point.
 
 \begin{figure}[h]
     \centering
@@ -698,21 +733,48 @@ The lateral width
     \caption{$W_{\eta^2}$, the lateral width of the shower, is plotted. The dashed line shows the maximum cut value, which is set at $0.01$\label{fig:wEta}. }
 \end{figure}
 
+% TODO: also use \Delta E = Emax2 - Emin https://twiki.cern.ch/twiki/bin/view/Main/ElectronIDIsEM Use of the first compartment of the ECAL: Cuts applied on the variables used in the hadronic calorimeter and the second sampling of the electromagnetic calorimeters reject jets with high energetic pions and wide shower; jets with single or multiple $\eta$, $\pi^0$ etc., are now the main contribution which can fake the electrons. The first compartment with its very fine granularity in rapidity can be used to detect substructures within a shower and thus isolated $\pi^0$'s and $\gamma$'s can be discriminated against efficiently. The lateral shower shape in the strips is exploited when a minimal amount of energy ($0.5$%) is reconstructed in the strips and for $|\eta |<2.35$ where the strips granularity is fine enough. For all first compartment criteria, two cells in $\phi$ are summed:
+
+%    Jets with $\pi^0$ decays are found to have often two maxima. The shower is studied in a window $\Delta \eta \times \Delta \phi = 0.125 \times 0.2$ around the hottest cell to look for a second maximum. If more than two maxima are found the second highest maximum is chosen. Two variables are used:
+%        the difference $\Delta E = E_{{\rm max2}} - E_{{\rm min}}$ of the energy associated with the second maximum $E_{{\rm max2}}$ and the energy reconstructed in the strip with the minimal value between the first and second maximum $E_{{\rm min}}$. 
 
 \subsubsection{Efficiency of Cuts}
 
-The overall linear cuts identified in this section are listed in Table [TODO].
+The overall linear cuts identified in this section are listed in Table \ref{table:linearCuts}, detailing the minimum and maximum cut values for each variable.
 
 \begin{table}[h!t]
 \centering
-\caption{ Variables Associated with the medium selection criteria \cite{ElectronPerformanceMeasurements}\label{table:mediumVariables}}
+\caption{The variables used in the linear cuts are listed, as well as the minimum and maximum cut values used. \label{table:linearCuts}}
 \begin{tabular}{|c|c|c| } 
 \hline
 Variable & Minimum Cut & Maximum Cut\\\hline
-$E_T$ & $200\,$GeV  & -\\\hline
-$R_{\eta}$ & $0.95$ & -\\\hline
+$E_T$ & $200\,$GeV  & - \\\hline
+$E/P$ & $1.2$  & - \\\hline
+$R_{\eta}$ & $0.95$ & - \\\hline
 $R_{\phi}$ & $0.96$ & -\\\hline
-$W_{\eta^2}$ & - & $0.01$ \\\hline
+$W_{\eta^2}$ & - & $0.01$\\\hline
+\end{tabular}
+\end{table}
+
+The acceptance$\times$efficiency for the different samples after the after each cut has been applied can be seen in Table \ref{table:linearCutEfficiencies}. These cuts are applied to the samples over the entire mass range, and it can be seen that the majority of the background is cut out. In the case of the Drell-Yan sample, most of the sample that is cut out is in the lower mass region, which is consistent with what is to be expected as 
+
+After applying the linear cuts identified in this section, the 
+
+compared with the initial event selection criteria used in \ref{table:selectionEfficiency}
+
+\begin{table}[h!t]
+\centering
+\caption{The impact of each cut on the acceptance$\times$efficiency for various samples is shown. It can be seen that the linear cuts remove a large amount of the background, albeit at the expense of a high percentage of signal events compared to the loose criteria. \label{table:linearCutEfficiencies}}
+\begin{tabular}{|c|c|c|c|c|c|c| } 
+\hline
+\multirow{2}{*}{Variable} & \multicolumn{6}{|c|}{Acceptance$\times$Efficiency ($\%$)}\\\cline{2-7}
+& $1.5\,$TeV $Z'$ & $2\,$TeV $Z'$ & $2.5\,$TeV $Z'$ & Drell-Yan & Diboson & $t\overline{t}$ \\\hline
+Acceptance  & $96.7\pm0.5$ & $97.3\pm0.5$ & $97.4\pm0.5$ & $86\pm1$ & $84.6\pm0.2$ & $99.5\pm0.3$\\\hline
+$E_T$ & $79.5\pm0.4$ & $82.9\pm0.5$ & $84.9\pm0.5$ & $0.290\pm0.002$ & $0.020\pm0.002$ & $0.10\pm0.01$\\\hline
+$E/P$ &  $78.5\pm0.4$ & $82.1\pm0.5$ & $84.1\pm0.5$ & $0.253\pm0.002$ & $0.008\pm0.001$ & $0.012\pm0.003$ \\\hline
+$R_{\eta}$ &  $71.4\pm0.4$ & $75.0\pm0.4$ & $77.3\pm0.4$ & $0.230\pm0.002$ & $0.0030\pm0.0007$ & $0.002\pm0.001$\\\hline
+$R_{\phi}$ & $57.0\pm0.4$ & $62.4\pm0.4$ & $65.9\pm0.4$ & $0.149\pm0.001$ & $0.0017\pm0.0005$ & $0.002\pm0.001$\\\hline
+$W_{\eta^2}$ & $54.5\pm0.4$ & $60.2\pm0.4$ & $63.6\pm0.4$ & $0.142\pm0.001$ & $0.0016\pm0.0005$ & $0.002\pm0.001$ \\\hline
 \end{tabular}
 \end{table}
 
@@ -721,7 +783,7 @@ $W_{\eta^2}$ & - & $0.01$ \\\hline
 
 %http://inspirehep.net/record/796888?ln=en
 
-The acheivable energy resolution of the $Z'$ mass was investigated using the Monte Carlo dataset. The energy resolution of a simulated $Z'$ event is obtained using the reconstructed $Z'$ mass $M_{Z'}$ and the true mass of the simulated $Z'$ before it is ``smeared'' in the simulation, $M_{\rm{Truth}}$, by the equation
+The achievable energy resolution of the $Z'$ mass was investigated using the Monte Carlo dataset. The energy resolution of a simulated $Z'$ event is obtained using the reconstructed $Z'$ mass $M_{Z'}$ and the true mass of the simulated $Z'$ before it is ``smeared'' in the simulation, $M_{\rm{Truth}}$, by the equation
 
 \begin{equation}
 \frac{\Delta M_{Z'}}{\Delta M_{\rm{Truth}}} = \frac{M_{\rm{Recon}}-M_{\rm{Truth}}}{M_{\rm{Truth}}}.
@@ -745,7 +807,7 @@ M^2 = \left(\sum E\right)^2 - \left(\sum \bf{P}_i\right)^2,
 
 where here natural units are adopted and $c$ is set to 1. 
 
-It is shown in \cite{ATLASResolutionEquation} that the energy resolution for measurement of the invariant mass of an electron pair can be modelled as an equation of the form
+It is shown in \cite{ATLASResolutionEquation} that the energy resolution for measurement of the invariant mass of an electron pair can be modeled as an equation of the form
 
 \begin{equation}
 \frac{\sigma(E)}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c,
@@ -757,16 +819,17 @@ where $a$ and $b$ are stochastic and noise terms respectively.
     \centering \includegraphics[scale=0.3]{images/resolution.png} \caption{ The resolution of the detector in both the barrel and endcap regions is  is plotted.  \label{fig:Resolution}.}
 \end{figure}
 
-The resolution of the detector, $\sigma_{\rm{det}}$, is plotted as a function of the invariant mass of a reconstructed particle in Figure \ref{fig:Resolution}. Drell-Yan samples are used here as the process is very similar kinematically to that of the $Z'$, and is a larger sample than that available in the $Z'$ data set, improving the uncertainty associated with the measurement of the resolution. The Drell-Yan set also exists over a larger range, allowing the evolution of the resolution of the detector as a function of the invariant mass to be investigated. It is seen that for both the barrel and endcap regions, the resolution tends towards $1\%$ at higher energies, of the order of $2\,$TeV. However, in the low energy range the uncertainty in the measurement of the invariant mass is significantly higher than expected.
+The resolution of the detector, $\sigma_{\rm{det}}$, is plotted as a function of the invariant mass of a reconstructed particle in Figure \ref{fig:Resolution}. Drell-Yan samples are used here as the process is very similar kinematically to that of the $Z'$, and is a larger sample than that available in the $Z'$ data set, improving the uncertainty associated with the measurement of the resolution. The Drell-Yan set also exists over a larger range, allowing the evolution of the resolution of the detector as a function of the invariant mass to be investigated. It is seen that for both the barrel and end-cap regions, the resolution tends towards $1\%$ at higher energies, of the order of $2\,$TeV. However, in the low energy range the uncertainty in the measurement of the invariant mass is significantly higher than expected.
 
 \subsection{Trigger and ID Criteria Efficiencies}
+
 \begin{figure}[h]
     \centering \includegraphics[scale=0.3]{images/TriggerZ.png} \caption{ The fraction of signal events passing the trigger \label{fig:TriggerZ} }
 \end{figure}
 
 \subsection{Barrel and Endcap}
 
-In the experiment, it is useful to determine the likely position of the final state pairs in the detector. The positions of the dilepton pair can be categorised as one of three combinations; these are barrel-barrel, barrel-endcap, and endcap-endcap. As the name suggests, a barrel-barrel event is one in which both final state leptons are located in the barrel of the EM calorimeter (TODO: or inner detector?), while barrel-endcap events are those in which one lepton is located in the barrel and another in the endcap. As discussed in Section \ref{sec:ATLAS_DetectorSchematics}, an electron is located in the barrel if its pseudorapidity $|\eta|<1.37$. If $|\eta|>1.52$ the lepton is located in the endcap, with leptons located in the crack region between the two not passing the selection criteria.
+In the experiment, it is useful to determine the likely position of the final state pairs in the detector. The positions of the dilepton pair can be categorised as one of three combinations; these are barrel-barrel, barrel-end-cap, and end-cap-end-cap. As the name suggests, a barrel-barrel event is one in which both final state leptons are located in the barrel of the EM calorimeter, while barrel-end-cap events are those in which one lepton is located in the barrel and another in the end-cap. As discussed in Section \ref{sec:ATLAS_DetectorSchematics}, an electron is located in the barrel if its pseudorapidity $|\eta|<1.37$. If $|\eta|>1.52$ the lepton is located in the end-cap, with leptons located in the crack region between the two not passing the selection criteria.
 
 \begin{figure}[htb]
 	%\centering
@@ -787,136 +850,22 @@ In the experiment, it is useful to determine the likely position of the final st
 
 The fraction of events falling into this category are plotted for the Drell-Yan sample and the $1.5\,$TeV $Z'$ sample. It can be seen that in the TeV range, in which  a $Z'$ may be located, more than $80\%$ of dilepton pairs fall in to the `barrel-barrel' category. 
 
-\subsection{Forwards Backwards Asymmmetry}
+\subsection{Forwards Backwards Asymmetry}
 
-Forwards backwards asymmetry defined as 
-\begin{equation}
-\rm{Asym} = \frac{n_f - n_b}{n_f + n_b}
-\end{equation}
-The quantity $\theta^*$ represents the polar angle $\theta$ between the $x-y$ plane and a final state electron in the reference frame of the other electron.
+%http://iopscience.iop.org/article/10.1088/1742-6596/383/1/012005/pdf
+
+As weak interactions can violate parity, the spatial distributions of these 
+The forwards backwards asymmetry is a measure of how likely an event is to be `forwards facing' with respect to some frame of reference compared to backwards. 
+
 \begin{figure}[h]
-    \centering \includegraphics[scale=0.3]{images/cosThetaStar.png} \caption{The probability as a function of $\cos\theta^*$ for Drell-Yan final state electrons is plotted. A slight backwards asymmetry can be seen. \label{fig:cosTheta} }
+    \centering \includegraphics[scale=0.3]{images/cosThetaStar.png} \caption{The variable $\cos\theta^*$ is plotted for $Z'$ and Drell-Yan events. It can be seen that  \label{fig:cosTheta} }
 \end{figure}
 
 \section{Conclusion}
 \label{sec:Conclusion}
 
-\section{Appendix}
-\subsection{Asimov Significance Errors}
-\label{sec:appendix_errors}
-For a multivariate function $f$ depending on a set of variables $\overrightarrow{x}$, the resultant uncertainty in $f$ can be expressed as 
-\begin{equation}
-\Delta f(\overrightarrow{x}) = \sqrt{\sum_{i=1}^{n} 
-\left( \frac{\partial f}{\partial x_i}\Delta x_i \right)^2}
-\end{equation}
+The $Z'$ is a hypothetical Beyond the Standard Model particle that has been the subject of extensive searches at the LHC and LEP. 
 
-For the approximate discovery significance $\frac{s}{\sqrt{b}}$, the error in this statistic is given by
-
-\begin{equation}
-\sqrt{\left( \frac{\Delta s}{\sqrt{b}} \right)^2 + \left( \frac{s\Delta b}{-2x^{-3/2}} \right)^2 } = \sqrt{\frac{(\Delta s)^2}{b} + \frac{s^2 (\Delta b)^2}{4b^{3}}}
-\end{equation}
-
-\subsection{Type I and II errors}
-
-In practise, there always exists some probability of rejecting the null hypothesis $H_0$ in favour of the signal hypothesis $H_1$. This is known as a type I error and its probability $\alpha$ is given by the equation
-\begin{equation}
-\alpha = \int_{W}f(x|H_0)dx,
-\end{equation}
-where $W$ is the signal region and $f(x|H_0)$ is the background probability density function. This is also known as the false discovery rate or significance.
-
-Conversely, type II errors are defined as accepting the null hypothesis if $H_1$ is true. Its probability is equal to
-\begin{equation}
-\beta = \int_{W}f(x|H_1)dx.
-\end{equation}
-The power of the test with respect to the hypothesis $H_1$, or the probability of accepting $H_1$ when it is true is equal to $1-\beta$.
-
-From Bayes' theorem, the posterior probability the signal purity is given by
-\begin{equation}
-P(s|x\in W) = \frac{P(x\in W|s)P(s)}{P(x\in W|s)P(s) + P(x \in W|b)P(b)}
-\end{equation}
-
-here $W$ is the signal region and $P(s)$ is the prior probability. $P(x\in W|s) = \epsilon_{\rm{s}}$, where $\epsilon_{\rm{s}}$ is known as the signal efficiency- this is equivalent to the power of the experiment $1-\beta$. Conversely, $P(x \in W|b) =  \int_{W}f(x|H_0)dx = \epsilon_{\rm{b}}$, where $\epsilon_{\rm{b}}$ is the background efficiency, equal to the significance $\alpha$.
-
-\subsection{Neyman-Pearson Lemma}
-In order to optimise the critical region, the boundary at which a transverse energy cut is applied, the Neyman-Pearson lemma \cite{NeymanPearsonLemma} is applied. This requires that the test statistic
-
-\begin{equation}
-t(x) = \frac{f(x|H_1)}{f(x|H_0)}
-\end{equation}
-
-is maximised, where $f(x|H_1)$ and $f(x|H_0)$ are the probability density functions for $Z'$ and $DY$ events in this case.
-
-\subsection{Cross Sections}
-
-\begin{table}[h!t]
-\label{table:DYXS}
-\centering
-\caption{ Drell-Yan cross sections }
-\begin{tabular}{ |c|c| } 
-\hline
-Mass (GeV) & $\sigma B\,$(fb)\\\hline
-$120-180$ & $9846$ \\\hline
-$180-250$ & $1571$\\\hline
-$250-400$ & $549.2$\\\hline
-$400-600$ & $89.66$\\\hline
-$600-800$ & $15.1$\\\hline
-$800-1000$ & $3.75$\\\hline
-$1000-1250$ & $1.293$\\\hline
-$1250-1500$ & $0.3577$\\\hline
-$1500-1750$ & $0.1123$\\\hline
-$1750-2000$ & $0.03838$\\\hline
-$2000-2250$ & $0.01389$\\\hline
-$2250-2500$ & $5.23\times10^{-3}$\\\hline
-$2500-2750$ & $2.02\times10^{-3}$\\\hline
-$2750-3000$ & $7.89\times10^{-4}$\\\hline
-$3000+$ & $5.04\times10^{-4}$\\\hline
-\end{tabular}
-\end{table}
-
-%http://w3.iihe.ac.be/~bclerbau/Summer07/cross_section_BSM.text
-\begin{table}[h!t]
-\label{table:ZPrimeXS}
-\centering
-\caption{ $Z'$ cross sections }
-\begin{tabular}{ |c|c| } 
-\hline
-Mass (GeV) & $\sigma B\,$(fb) \\\hline
-$1500$ & $15.134$ \\\hline
-$2000$ & $2.556$ \\\hline 
-$2500$ & $0.696$ \\\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h!t]
-\label{table:DBi}
-\centering
-\caption{ Diboson cross sections }
-\begin{tabular}{ |c|c| } 
-\hline
-Process & $\sigma B\,$(fb) \\\hline
-$WW$ & $1.149\times10^4$ \\\hline
-$WZ$ & $3481$ \\\hline 
-$ZZ$ & $976$ \\\hline
-$t\overline{t}$ & $8.02\times10^4$\\\hline
-\end{tabular}
-\end{table}
-
-\subsection{Asimov Partial Derivatives}
-
-Using the chain rule, the rate of change of discovery significance with respect to the search window size can be expressed as
-
-\begin{equation}
-\frac{d Z_0}{d W} = \frac{\partial Z_0}{\partial s}\frac{\partial s}{\partial W} + \frac{\partial Z_0}{\partial b}\frac{\partial b}{\partial W} = 0.
-\end{equation}
-
-The partial derivatives of Equation \ref{eqn:asimov} are equal to
-
-\begin{equation}
-\begin{split}
-\frac{\partial Z_0}{\partial s} & = \frac{\ln(\frac{s}{b}+1)}{\sqrt{2\left((b+s)\ln(\frac{s}{b}+1))-s\right)}} \\ 
-\frac{\partial Z_0}{\partial b} & = \frac{\ln(\frac{s}{b}+1)-\frac{s}{b}}{\sqrt{2\left((b+s)\ln(\frac{s}{b}+1))-s\right)}}.
-\end{split}
-\end{equation}
 \bibliographystyle{unsrt}
 \bibliography{./references}
 \end{document}
